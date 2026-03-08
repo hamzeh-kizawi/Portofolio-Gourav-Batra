@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-amber-50 dark:bg-zinc-950 text-slate-800 dark:text-zinc-200 font-sans antialiased;
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  /* Light mode — joyful gradient text */
+  .text-gradient-joy {
+    @apply bg-gradient-to-r from-orange-500 via-rose-500 to-teal-500 bg-clip-text text-transparent;
+  }
+  /* Dark mode — neon gradient text */
+  .text-gradient-neon {
+    @apply bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent;
+  }
+  /* Universal teal gradient (retained for Hero) */
+  .text-gradient-teal {
+    @apply bg-gradient-to-r from-teal to-teal-light bg-clip-text text-transparent;
+  }
+  /* Theme-adaptive gradient divider line */
+  .divider-gradient {
+    @apply h-px w-full bg-gradient-to-r from-orange-300 via-teal-400 to-rose-300 dark:from-blue-800 dark:via-cyan-600 dark:to-blue-800 opacity-50;
+  }
+  /* Glassmorphism card — dark mode */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+  }
+  /* Joyful card — light mode */
+  .joy-card {
+    @apply bg-white border border-orange-100 shadow-sm shadow-orange-100/60;
+  }
+}
