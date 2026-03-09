@@ -30,7 +30,7 @@ export default function Hero({ theme }) {
     <section className="min-h-screen bg-navy dark:bg-zinc-950 relative overflow-hidden flex items-center transition-colors duration-300">
       {/* Background grid texture */}
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage: `repeating-linear-gradient(0deg, #fff 0px, #fff 1px, transparent 1px, transparent 60px),
             repeating-linear-gradient(90deg, #fff 0px, #fff 1px, transparent 1px, transparent 60px)`,
@@ -90,7 +90,7 @@ export default function Hero({ theme }) {
               <a
                 href="/CV_Gourav Batra.pdf"
                 download="CV_Gourav Batra.pdf"
-                className={`flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition-all ${
+                className={`flex items-center gap-2 text-white visited:text-white font-semibold px-6 py-3 rounded-lg transition-all ${
                   isDark
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]'
                     : 'bg-gradient-to-r from-orange-400 via-rose-400 to-teal-500 hover:opacity-90'
@@ -101,7 +101,7 @@ export default function Hero({ theme }) {
               </a>
               <a
                 href="#contact"
-                className="flex items-center gap-2 border border-white/30 hover:bg-white/8 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
+                className="flex items-center gap-2 border border-white/30 hover:bg-white/8 text-white visited:text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 Get in Touch
               </a>

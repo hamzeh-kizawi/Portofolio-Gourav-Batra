@@ -34,7 +34,7 @@ Single-page React 18 portfolio for Gourav Batra. No routing — all content is o
 
 `Hero` → `About` → `Expertise` → `Experience` → `Education` → `Skills` → `Projects` → `VolunteerWork` → `Contact`
 
-`theme` prop is passed to `Hero` (for theme-reactive ring colors) and `toggleTheme` to `Navbar`.
+`theme` and `toggleTheme` props are both passed to `Navbar`; `theme` is also passed to `Hero` (for theme-reactive ring colors).
 
 ### Component structure
 
@@ -68,7 +68,7 @@ src/
   constants/
     content.js
     animations.js
-  assets/images/          — 11 image assets; all are used (see mapping below)
+  assets/images/          — 12 image assets; all are used (see mapping below)
 ```
 
 ### Image → section mapping
@@ -83,7 +83,8 @@ src/
 | `dashboard_organizations.png` | DashboardMasonry; Projects carousel |
 | `dashboard_projects.png` | DashboardMasonry; Projects carousel |
 | `expense_manager-dashboard.png` | DashboardMasonry; Projects carousel |
-| `Stage-Speaking-Photo.jpg` | VolunteerWork card 1 |
+| `vote-pic.jpeg` | VolunteerWork card 1 (imported in content.js) |
+| `Stage-Speaking-Photo.jpg` | VolunteerWork (available, verify usage) |
 | `Award-Ceremony-Photo.jpg` | VolunteerWork card 2 |
 | `Sitting-on-Steps.jpg` | Contact — small identity photo card |
 
