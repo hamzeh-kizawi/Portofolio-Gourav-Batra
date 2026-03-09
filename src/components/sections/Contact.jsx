@@ -71,7 +71,7 @@ export default function Contact() {
             {/* Contact links */}
             <motion.div variants={fadeRight} className="space-y-4">
               <a
-                href="mailto:gouravbatra@email.com"
+                href="mailto:gouravbatra02@outlook.com"
                 className="flex items-center gap-4 group"
               >
                 <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-orange-500/20 dark:group-hover:bg-cyan-400/20 transition-colors shrink-0">
@@ -80,13 +80,13 @@ export default function Contact() {
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-wide">Email</p>
                   <p className="text-white text-sm font-medium group-hover:text-orange-400 dark:group-hover:text-cyan-400 transition-colors">
-                    gouravbatra@email.com
+                    gouravbatra02@outlook.com
                   </p>
                 </div>
               </a>
 
               <a
-                href="https://linkedin.com/in/gouravbatra"
+                href="https://www.linkedin.com/in/ibatragourav/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group"
@@ -97,7 +97,7 @@ export default function Contact() {
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-wide">LinkedIn</p>
                   <p className="text-white text-sm font-medium group-hover:text-orange-400 dark:group-hover:text-cyan-400 transition-colors flex items-center gap-1">
-                    linkedin.com/in/gouravbatra
+                    linkedin.com/in/ibatragourav
                     <ExternalLink className="w-3 h-3" />
                   </p>
                 </div>
@@ -109,7 +109,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-wide">Location</p>
-                  <p className="text-white text-sm font-medium">Vienna, Austria · Open to EU roles</p>
+                  <p className="text-white text-sm font-medium">EU · Open to EU roles</p>
                 </div>
               </div>
             </motion.div>

@@ -4,11 +4,11 @@ import { fadeLeft, fadeRight, staggerContainer } from '@/constants/animations'
 import profilePic from '@/assets/images/me-suit-image.png'
 
 const tags = [
-  'EU Research Programs',
+  'B2B Demand Generation',
   'MarTech Architecture',
   'Performance Marketing',
   'CRM Analytics',
-  'B2B Demand Generation',
+  'EU Research Programs',
 ]
 
 export default function Hero({ theme }) {
