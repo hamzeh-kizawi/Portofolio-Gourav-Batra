@@ -12,8 +12,12 @@ export default function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     setStatus('sending')
-    // Simulate async send (wire to Formspree/EmailJS in production)
-    setTimeout(() => setStatus('sent'), 1200)
+    const subject = encodeURIComponent(`Portfolio Contact: ${fields.name}`)
+    const body = encodeURIComponent(
+      `Name: ${fields.name}\nFrom: ${fields.email}\n\nMessage:\n${fields.message}`
+    )
+    window.location.href = `mailto:gouravbatra02@outlook.com?subject=${subject}&body=${body}`
+    setTimeout(() => setStatus('sent'), 500)
   }
 
   if (status === 'sent') {
