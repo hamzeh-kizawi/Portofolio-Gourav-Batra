@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowDown } from 'lucide-react'
+import { Download, ArrowDown } from 'lucide-react'
 import { fadeLeft, fadeRight, staggerContainer } from '@/constants/animations'
 import profilePic from '@/assets/images/me-suit-image.png'
 
@@ -88,15 +88,16 @@ export default function Hero({ theme }) {
             {/* CTAs */}
             <motion.div variants={fadeLeft} className="flex flex-wrap gap-3 pt-2">
               <a
-                href="#projects"
+                href="/CV_Gourav Batra.pdf"
+                download="CV_Gourav Batra.pdf"
                 className={`flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-lg transition-all ${
                   isDark
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]'
                     : 'bg-gradient-to-r from-orange-400 via-rose-400 to-teal-500 hover:opacity-90'
                 }`}
               >
-                View My Work
-                <ArrowDown className="w-4 h-4" />
+                Download CV
+                <Download className="w-4 h-4" />
               </a>
               <a
                 href="#contact"
