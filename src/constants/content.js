@@ -11,6 +11,27 @@ import expenseManager from '@/assets/images/expense_manager-dashboard.png'
 import votePic from '@/assets/images/vote-pic.jpeg'
 import awardCeremonyPhoto from '@/assets/images/Award-Ceremony-Photo.jpg'
 
+// Certification images
+import hubspotImage from '@/assets/images/HubSpot.jpeg'
+import hubspotInboundImage from '@/assets/images/Inbound-Marketing-Certification.jpeg'
+import semrushImage from '@/assets/images/Semrush-academy.jpeg'
+import mailchimpImage from '@/assets/images/Mailchimp.jpeg'
+import leanSixSigmaImage from '@/assets/images/Lean-Six-Sigma.jpeg'
+import recognitionImage from '@/assets/images/Recognition-from-CEO-VFS-Global.png'
+
+// Concept project images
+import theFormulaImage from '@/assets/images/The-Formula.png'
+import aurpayImage from '@/assets/images/Aurpay.png'
+import apaleoImage from '@/assets/images/Apaleo.png'
+import loxoneImage from '@/assets/images/Loxone.png'
+
+// Work project images
+import b2bImage from '@/assets/images/B2B.png'
+import euDigitalImage from '@/assets/images/EU-Digital.png'
+import vfsGlobalImage from '@/assets/images/VFS-Global.png'
+import euRdImage from '@/assets/images/EU-R&D.png'
+import thesisImage from '@/assets/images/Masters-Thesis.png'
+
 // ─── EXPERTISE ────────────────────────────────────────────────────────────────
 
 export const expertise = [
@@ -146,33 +167,47 @@ export const experience = [
 
 export const education = [
   {
-    degree: 'MBA — International Management',
+    degree: 'MBA – Marketing',
     institution: 'Anhalt University of Applied Sciences',
-    location: 'Köthen, Germany',
-    period: '2020 – 2022',
+    location: 'Germany',
+    period: '2023 – 2025',
     description:
-      'Specialized in international business strategy, marketing management, and cross-cultural leadership. Thesis focused on CRM automation — achieving a 32% efficiency improvement in marketing operations workflows.',
-    thesis: '32% efficiency improvement via CRM automation',
+      'Specialized in marketing management and business strategy within an international academic environment.',
+    thesis: 'Agility & AI in Marketing Project Portfolio Management',
+    thesisLabel: 'Research',
     highlight: true,
   },
   {
-    degree: 'Erasmus Exchange — Business & Marketing',
-    institution: 'University of Valladolid',
-    location: 'Valladolid, Spain',
-    period: '2021',
+    degree: 'Marketing Certificate Program',
+    institution: 'Anhalt University of Applied Sciences',
+    location: 'Germany',
+    period: '2023',
     description:
-      'Semester abroad through the Erasmus+ program. Studied international marketing strategy and participated in cross-European student business projects.',
+      'Certificate program focusing on international marketing strategy, market analysis, and campaign planning.',
     thesis: null,
+    thesisLabel: null,
     highlight: false,
   },
   {
-    degree: 'BBA — Marketing Management',
-    institution: 'Maharshi Dayanand University',
-    location: 'Rohtak, India',
-    period: '2014 – 2017',
+    degree: 'Erasmus Exchange Program',
+    institution: 'University of Valladolid',
+    location: 'Spain',
+    period: '2024',
     description:
-      'Bachelor of Business Administration with a specialization in Marketing Management. Coursework covered consumer behaviour, brand management, advertising, and market research.',
+      'International academic exchange program focused on global marketing perspectives.',
     thesis: null,
+    thesisLabel: null,
+    highlight: false,
+  },
+  {
+    degree: 'BBA – Marketing',
+    institution: 'Maharshi Dayanand University',
+    location: 'India',
+    period: '2015 – 2018',
+    description:
+      'Undergraduate studies in marketing, management, and business administration.',
+    thesis: null,
+    thesisLabel: null,
     highlight: false,
   },
 ]
@@ -250,24 +285,24 @@ export const skills = [
 
 export const volunteer = [
   {
-    title: 'Student Union Election Campaign Lead',
+    title: 'University Senate Member & Student Representative (Elected)',
     organization: 'Anhalt University of Applied Sciences',
     location: 'Köthen, Germany',
     year: '2024',
     description:
-      'Led the student union election campaign — designing outreach strategy, coordinating campaign materials, and presenting at university-wide events. Delivered a keynote presentation on student welfare and international student integration.',
+      'Contested and successfully won three student representative offices in the 2024 university elections, including the main Senate position. Led the campaign strategy through student outreach, messaging, and engagement activities across campus. Represented students in academic and policy discussions while advocating for student welfare, international student integration, and improved communication between students and university administration.',
     photo: votePic,
-    photoAlt: 'Gourav Batra at student union election campaign',
+    photoAlt: 'Gourav Batra at university senate election campaign',
   },
   {
-    title: 'Diwali Cultural Event Coordinator',
-    organization: 'Anhalt University of Applied Sciences',
-    location: 'Köthen, Germany',
+    title: 'Diwali Cultural Event Coordinator & Stage Host',
+    organization: 'Hindu Mandir Association',
+    location: 'Vienna, Austria',
     year: '2025',
     description:
-      'Organized and coordinated Diwali 2021 — a 200+ attendee cultural celebration that brought together students from 20+ nationalities. Managed logistics, entertainment, and communications from concept to execution.',
+      'Coordinated the 29th Diwali Mela cultural celebration organized by the Hindu Mandir Association in Vienna, attended by nearly 500 people including officials from the Embassy of India in Austria. Managed end-to-end event coordination including planning, volunteer management, performer scheduling, stage operations, and live telecast support. Also served as the event\'s stage anchor, hosting cultural performances and engaging the audience throughout the program. Received a recognition award from the organizing committee for contributions to the successful execution of the event.',
     photo: awardCeremonyPhoto,
-    photoAlt: 'Gourav Batra at Diwali cultural event award ceremony',
+    photoAlt: 'Gourav Batra at Diwali Mela award ceremony, Vienna',
   },
 ]
 
@@ -300,27 +335,6 @@ export const projects = [
       },
     ],
   },
-  {
-    id: 'expense-intelligence',
-    title: 'Expense Intelligence Suite',
-    subtitle: 'Financial Operations & Reporting Pipeline',
-    description:
-      'Designed and implemented the financial operations layer for EUThink — an expense management system with real-time spend tracking, category breakdowns, and project-level budget attribution across 9 international partner organizations.',
-    role: 'Operations Architect',
-    tags: ['Financial Ops', 'Reporting', 'Data Visualization', 'Automation', 'Budget Tracking'],
-    screenshots: [
-      {
-        label: 'Expense Dashboard',
-        image: expenseManager,
-        caption: 'Real-time spending over time with category and per-project budget attribution',
-      },
-      {
-        label: 'Organizations',
-        image: dashboardOrgs,
-        caption: '9 partner organizations tracked across Austria, Slovakia, Bulgaria, UAE, and Portugal',
-      },
-    ],
-  },
 ]
 
 // ─── DASHBOARD SCREENSHOTS (for DashboardMasonry) ─────────────────────────────
@@ -332,6 +346,252 @@ export const dashboardScreenshots = [
   { image: dashboardProjects, caption: 'Projects — 27 EU research programs', span: 'normal' },
   { image: expenseManager, caption: 'Expense Manager — budget attribution', span: 'normal' },
 ]
+
+// ─── WORK PROJECTS (Campaign & Creative) ──────────────────────────────────────
+
+export const workProjects = [
+  {
+    id: 'b2b-siuk',
+    title: 'B2B Lead Generation Campaign',
+    subtitle: 'SI-UK Global',
+    role: 'Marketing Specialist',
+    description:
+      'International education recruitment campaigns targeting prospective students and institutional partners.',
+    highlights: [
+      'CRM audience segmentation',
+      'Lifecycle email automation',
+      'Campaign reporting improvements',
+      'Marketing funnel monitoring',
+    ],
+    tools: ['Salesforce', 'HubSpot', 'Email Marketing Platforms'],
+    result: '30% increase in qualified leads',
+    image: b2bImage,
+    video: null,
+    link: null,
+    featured: false,
+  },
+  {
+    id: 'eu-digital',
+    title: 'EU Digital Outreach Campaign',
+    subtitle: 'VAEV Research & Development Agency',
+    role: 'Marketing & Social Media Intern',
+    description:
+      'Digital outreach campaigns supporting EU research and innovation initiatives.',
+    highlights: [
+      'SEO optimization',
+      'Content calendar planning',
+      'Engagement analytics tracking',
+      'A/B testing of campaign formats',
+    ],
+    tools: ['Google Analytics', 'SEMrush'],
+    result: '25% engagement growth across digital channels',
+    image: euDigitalImage,
+    video: null,
+    link: null,
+    featured: false,
+  },
+  {
+    id: 'vfs-campaigns',
+    title: 'VFS Global Campaigns',
+    subtitle: 'VFS Global',
+    role: 'Junior Marketing Specialist',
+    description:
+      'Marketing campaigns supporting global visa and government service programs across multiple international markets.',
+    highlights: [
+      'Digital campaign coordination',
+      'Paid advertising performance monitoring',
+      'Marketing analytics reporting',
+      'CRM-based partner communication',
+    ],
+    tools: [],
+    result: 'Improved campaign targeting using audience insights and performance metrics',
+    image: vfsGlobalImage,
+    video: null,
+    link: null,
+    featured: false,
+  },
+  {
+    id: 'eu-rd',
+    title: 'EU R&D Campaigns',
+    subtitle: 'EU Innovation Initiatives',
+    role: 'Marketing & Project Management Intern',
+    description:
+      'Marketing support across EU innovation initiatives, focusing on campaign analytics and paid media performance.',
+    highlights: [
+      'Campaign launch coordination',
+      'Paid media support (Google Ads, LinkedIn Ads)',
+      'ROI and CAC analysis',
+      'Landing page performance evaluation',
+    ],
+    tools: ['Google Ads', 'LinkedIn Ads'],
+    result: 'Strengthened campaign analytics visibility for optimization decisions',
+    image: euRdImage,
+    video: null,
+    link: null,
+    featured: false,
+  },
+  {
+    id: 'eu-promo-video',
+    title: 'EU Promotional Video — Volvente',
+    subtitle: 'EU Innovation Communication',
+    role: 'Concept, Script & Production',
+    description:
+      'Promotional video created to support EU innovation communication initiatives.',
+    highlights: [
+      'Developed narrative concept and script',
+      'Produced and edited final video',
+      'Delivered reusable digital communication asset',
+    ],
+    tools: [],
+    result: null,
+    image: null,
+    video: 'https://www.youtube.com/watch?v=BNOXtzFWo7I',
+    link: null,
+    featured: false,
+  },
+  {
+    id: 'fashion-doc',
+    title: 'Fashion Documentary',
+    subtitle: 'Wise Fashion EU Project',
+    role: 'Video Editor',
+    description:
+      'Documentary created from large volumes of raw footage recorded by multiple contributors.',
+    highlights: [
+      'Organized and reviewed 100+ raw clips',
+      'Reconstructed narrative structure',
+      'Added infographic elements for storytelling',
+    ],
+    tools: [],
+    result: 'Coherent documentary narrative from fragmented source footage',
+    image: null,
+    video: null,
+    link: { url: 'https://wisefashion.eu/project-results/', label: 'View Project Results' },
+    featured: false,
+  },
+  {
+    id: 'masters-thesis',
+    title: "Master's Thesis",
+    subtitle: 'Agility & AI in Marketing Project Portfolio Management',
+    role: 'Researcher — Anhalt University of Applied Sciences',
+    description:
+      'Evaluated how Agile methodologies and AI tools improve efficiency in marketing project portfolios.',
+    highlights: [],
+    tools: [],
+    result: '32% improvement in portfolio efficiency · 27% reduction in project delays',
+    image: thesisImage,
+    video: null,
+    link: null,
+    featured: true,
+  },
+]
+
+// ─── CONCEPT PROJECTS ─────────────────────────────────────────────────────────
+
+export const conceptProjects = [
+  {
+    id: 'the-formula',
+    title: 'The Formula – Brand Identity Concept',
+    subtitle: 'Berlin Recruiting Consultancy',
+    role: 'Brand Identity · Interview Assignment',
+    description:
+      'Minimalist logo concepts developed for a Berlin-based recruiting consultancy. The task focused on redesigning the existing identity into a cleaner and more modern brand mark suitable for digital platforms and professional recruitment branding. Multiple logo variations were explored to improve visual clarity, scalability, and brand recognition.',
+    highlights: [],
+    tools: [],
+    result: null,
+    image: theFormulaImage,
+    video: null,
+    link: null,
+    featured: false,
+  },
+  {
+    id: 'aurpay',
+    title: 'AURPAY – Fintech Promotional Poster',
+    subtitle: 'Fintech Payment Platform',
+    role: 'Visual Design · Interview Assignment',
+    description:
+      'Promotional poster concept designed for a fintech payment platform highlighting product benefits, trust signals, and simplified communication of crypto payment solutions. The design focused on clear visual hierarchy, modern fintech aesthetics, and strong call-to-action placement to attract merchants and technology-oriented audiences.',
+    highlights: [],
+    tools: [],
+    result: null,
+    image: aurpayImage,
+    video: null,
+    link: null,
+    featured: false,
+  },
+  {
+    id: 'apaleo',
+    title: 'Apaleo – SaaS Growth Strategy Concept',
+    subtitle: 'Hospitality SaaS Platform',
+    role: 'Growth Strategy · Interview Assignment',
+    description:
+      'Strategic concept presentation created for Apaleo, a hospitality SaaS platform. The project explored opportunities to improve platform adoption through app ecosystem integrations, enhanced onboarding experience, and developer engagement strategies aimed at increasing user activation and marketplace visibility.',
+    highlights: [],
+    tools: [],
+    result: null,
+    image: apaleoImage,
+    video: null,
+    link: null,
+    featured: false,
+  },
+  {
+    id: 'loxone',
+    title: 'Loxone – Smart Audio Product Launch Strategy',
+    subtitle: 'Smart Home · DACH Region',
+    role: 'Performance Marketing · Interview Assignment',
+    description:
+      'Performance marketing strategy developed as part of an interview assignment for the Loxone Smart Audio product launch across the DACH region. The concept included full-funnel campaign planning, search and social advertising strategies, webinar lead generation campaigns, and landing page optimization to convert installers and system integrators into qualified leads.',
+    highlights: [],
+    tools: [],
+    result: null,
+    image: loxoneImage,
+    video: null,
+    link: null,
+    featured: false,
+  },
+]
+
+// ─── CERTIFICATIONS ───────────────────────────────────────────────────────────
+
+export const certifications = [
+  {
+    id: 'hubspot-seo',
+    name: 'SEO Certification',
+    issuer: 'HubSpot',
+    image: hubspotImage,
+  },
+  {
+    id: 'hubspot-inbound',
+    name: 'Inbound Marketing Certification',
+    issuer: 'HubSpot',
+    image: hubspotInboundImage,
+  },
+  {
+    id: 'semrush',
+    name: 'Master Your Brand Voice Certification',
+    issuer: 'SEMrush Academy',
+    image: semrushImage,
+  },
+  {
+    id: 'mailchimp',
+    name: 'Foundations Certification',
+    issuer: 'Mailchimp',
+    image: mailchimpImage,
+  },
+  {
+    id: 'lean-six-sigma',
+    name: 'Yellow Belt Certification',
+    issuer: 'Lean Six Sigma',
+    image: leanSixSigmaImage,
+  },
+]
+
+export const recognition = {
+  title: 'Recognition from CEO – VFS Global',
+  label: 'Appreciation',
+  description:
+    'Recognised under the "Fellowship of Winners" program by the CEO of VFS Global for demonstrating exceptional dedication to operational excellence, outstanding client service quality, and consistently maintaining the highest standards in a demanding global service environment.',
+  image: recognitionImage,
+}
 
 // ─── STATS (About section) ────────────────────────────────────────────────────
 

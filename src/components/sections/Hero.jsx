@@ -143,6 +143,7 @@ export default function Hero({ theme }) {
                   src={profilePic}
                   alt="Gourav Batra"
                   className="w-full h-full object-cover object-top"
+                  loading="eager"
                 />
               </div>
 

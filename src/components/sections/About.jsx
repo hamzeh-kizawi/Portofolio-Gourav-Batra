@@ -29,24 +29,25 @@ export default function About() {
             <motion.div variants={fadeLeft} className="space-y-4 text-slate-700 dark:text-zinc-300 leading-relaxed">
               <p>
                 I'm a Growth Marketing and Marketing Operations professional with over five years of
-                experience working across international environments in Austria, Germany, Spain,
-                Hungary, and India.
+                experience working across international environments in Austria, Germany, Spain, and India.
               </p>
               <p>
                 I help organizations grow through measurable marketing execution — combining
-                performance campaigns, CRM automation, and analytics-driven optimization to improve
+                performance campaigns, CRM workflows, and analytics-driven optimization to improve
                 lead generation, conversion funnels, and marketing visibility.
               </p>
               <p>
-                Most recently, I've been the Growth Lead and platform admin for{' '}
+                Most recently, I worked as the business-side Product Owner for{' '}
                 <span className="font-semibold text-teal dark:text-cyan-400">EUThink</span>, an EU-funded research
-                management system coordinating 39 projects across 9 organizations in 6+ countries.
-                Building the analytics infrastructure there deepened my conviction that great
-                marketing starts with clean, trustworthy data.
+                management platform supporting collaboration across multiple projects and partner
+                organizations. In this role, I helped define KPI dashboards, reporting structures,
+                and workflow requirements while coordinating with developers to align the platform
+                with operational and stakeholder needs.
               </p>
               <p>
-                Beyond the dashboards, I'm a regular speaker at industry panels and a believer in
-                the power of Europe's research and innovation ecosystem to drive real-world impact.
+                Beyond the dashboards, I'm passionate about combining marketing strategy, analytics,
+                and project coordination to support innovation-driven initiatives across Europe's
+                research and technology ecosystem.
               </p>
             </motion.div>
 
@@ -75,6 +76,8 @@ export default function About() {
                 src={presentationPhoto}
                 alt="Gourav Batra presenting at an event"
                 className="w-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="bg-orange-50/80 dark:bg-zinc-800 px-4 py-2 border-t border-orange-100 dark:border-zinc-700">
                 <p className="text-slate-500 dark:text-zinc-400 text-xs italic text-center">
@@ -89,6 +92,8 @@ export default function About() {
                 src={budapestPhoto}
                 alt="Budapest — international work experience"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </motion.div>

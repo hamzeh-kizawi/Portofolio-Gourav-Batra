@@ -62,6 +62,8 @@ export default function VolunteerWork() {
                       src={item.photo}
                       alt={item.photoAlt}
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                      decoding="async"
                     />
                     {/* Year badge */}
                     <span className="absolute top-3 right-3 bg-white/90 dark:bg-zinc-900/90 text-slate-700 dark:text-zinc-300 text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
@@ -133,6 +135,8 @@ export default function VolunteerWork() {
                 src={selected.photo}
                 alt={selected.photoAlt}
                 className="w-full max-h-[80vh] object-contain rounded-xl shadow-2xl"
+                loading="lazy"
+                decoding="async"
               />
               <p className="text-white/70 text-sm text-center mt-3">{selected.title} · {selected.year}</p>
             </motion.div>

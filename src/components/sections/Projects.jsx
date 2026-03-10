@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion'
 import { fadeUp, staggerContainer, viewport } from '@/constants/animations'
 import ProjectCard from '@/components/ui/ProjectCard'
+import WorkCard from '@/components/ui/WorkCard'
 import DashboardMasonry from '@/components/ui/DashboardMasonry'
-import { projects } from '@/constants/content'
+import { projects, workProjects } from '@/constants/content'
 
 export default function Projects() {
   return (
@@ -23,8 +24,7 @@ export default function Projects() {
             Featured Work & Dashboards
           </h2>
           <p className="text-slate-500 dark:text-zinc-400 max-w-xl mx-auto">
-            A selection of platforms and systems I've built, managed, and scaled — from
-            EU-funded research infrastructure to financial operations pipelines.
+            A selection of platforms, campaigns, and creative work I've built, managed, and scaled — from EU-funded research infrastructure to B2B lead generation and video production.
           </p>
         </motion.div>
 
@@ -34,7 +34,7 @@ export default function Projects() {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          className="max-w-2xl mx-auto w-full"
         >
           {projects.map((project) => (
             <ProjectCard key={project.id} {...project} />
@@ -69,6 +69,36 @@ export default function Projects() {
         >
           All dashboards from EUThink v1.0.0 Beta — live platform managed by Gourav Batra
         </motion.p>
+
+        {/* Campaign & Creative Work */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          className="mt-20"
+        >
+          <div className="text-center mb-8">
+            <p className="text-orange-500 dark:text-cyan-400 text-sm font-semibold uppercase tracking-widest mb-1">
+              Campaign Work & Creative Projects
+            </p>
+            <h3 className="text-slate-800 dark:text-white text-2xl font-bold">
+              More Selected Work
+            </h3>
+          </div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          >
+            {workProjects.map((project) => (
+              <WorkCard key={project.id} {...project} />
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )

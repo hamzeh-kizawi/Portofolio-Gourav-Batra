@@ -36,6 +36,8 @@ export default function DashboardMasonry() {
             src={large.image}
             alt={large.caption}
             className="w-full h-full object-cover aspect-video"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
             <p className="text-white text-sm font-medium">{large.caption}</p>
@@ -56,6 +58,8 @@ export default function DashboardMasonry() {
               src={screenshot.image}
               alt={screenshot.caption}
               className="w-full aspect-video object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
               <p className="text-white text-xs font-medium leading-snug">{screenshot.caption}</p>
@@ -94,6 +98,8 @@ export default function DashboardMasonry() {
                 src={selected.image}
                 alt={selected.caption}
                 className="w-full max-h-[80vh] object-contain rounded-xl shadow-2xl"
+                loading="lazy"
+                decoding="async"
               />
               <p className="text-white/70 text-sm text-center mt-3">{selected.caption}</p>
             </motion.div>

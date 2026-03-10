@@ -35,6 +35,8 @@ export default function ImageCarousel({ screenshots }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </AnimatePresence>
       </div>

@@ -58,6 +58,8 @@ export default function Contact() {
                 src={sittingPhoto}
                 alt="Gourav Batra sitting on steps"
                 className="w-20 h-20 rounded-xl object-cover object-center shrink-0"
+                loading="lazy"
+                decoding="async"
               />
               <div>
                 <p className="text-white font-bold text-base">Gourav Batra</p>

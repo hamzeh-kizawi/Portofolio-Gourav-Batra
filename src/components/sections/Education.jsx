@@ -22,7 +22,7 @@ export default function Education() {
             Academic Background
           </h2>
           <p className="text-slate-500 dark:text-zinc-400 max-w-xl mx-auto">
-            International education across Germany, Spain, and India — grounding marketing strategy in business theory and cross-cultural practice.
+            International education across Germany, Spain, and India — combining business theory, marketing strategy, and cross-cultural practice.
           </p>
         </motion.div>
 
@@ -32,7 +32,7 @@ export default function Education() {
           initial="hidden"
           whileInView="visible"
           viewport={viewport}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
           {education.map((edu) => (
             <motion.div
@@ -80,7 +80,7 @@ export default function Education() {
                 <div className="flex items-start gap-2 mt-auto pt-3 border-t border-orange-200 dark:border-cyan-500/20">
                   <Award className="w-4 h-4 text-orange-500 dark:text-cyan-400 mt-0.5 shrink-0" />
                   <p className="text-slate-700 dark:text-zinc-300 text-xs font-semibold">
-                    Thesis: {edu.thesis}
+                    {edu.thesisLabel ?? 'Thesis'}: {edu.thesis}
                   </p>
                 </div>
               )}

@@ -7,7 +7,9 @@ import Experience from '@/components/sections/Experience'
 import Education from '@/components/sections/Education'
 import Skills from '@/components/sections/Skills'
 import Projects from '@/components/sections/Projects'
+import ConceptWork from '@/components/sections/ConceptWork'
 import VolunteerWork from '@/components/sections/VolunteerWork'
+import Certifications from '@/components/sections/Certifications'
 import Contact from '@/components/sections/Contact'
 
 export default function App() {
@@ -20,11 +22,13 @@ export default function App() {
         <Hero theme={theme} />
         <About />
         <Expertise />
-        <Experience />
-        <Education />
-        <Skills />
         <Projects />
+        <ConceptWork />
+        <Experience />
+        <Skills />
+        <Education />
         <VolunteerWork />
+        <Certifications />
         <Contact />
       </main>
     </div>
