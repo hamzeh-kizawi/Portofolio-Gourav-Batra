@@ -275,7 +275,7 @@ export const skills = [
     items: [
       'English — Fluent',
       'Hindi — Native',
-      'German — Intermediate (B1)',
+      'German — Upper Intermediate (B2)',
       'Spanish — Basic (A2)',
     ],
   },
