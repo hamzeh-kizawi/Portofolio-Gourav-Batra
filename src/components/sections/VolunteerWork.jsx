@@ -4,6 +4,85 @@ import { Heart, X } from 'lucide-react'
 import { fadeUp, fadeLeft, fadeRight, staggerContainer, viewport } from '@/constants/animations'
 import { volunteer } from '@/constants/content'
 
+function VolunteerCard({ item, isLeft, onSelect }) {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const hasMultiple = item.photos.length > 1
+
+  return (
+    <motion.div
+      variants={isLeft ? fadeLeft : fadeRight}
+      className="group relative flex flex-col h-full rounded-2xl overflow-hidden border shadow-md transition-shadow hover:shadow-xl bg-white dark:bg-white/[0.03] border-orange-100 dark:border-white/10 shadow-orange-100/50 dark:shadow-zinc-900/60"
+    >
+      {/* Photo zone */}
+      <div
+        className="relative overflow-hidden h-56 shrink-0 cursor-pointer"
+        onClick={() => onSelect({ ...item.photos[activeIndex], title: item.title, year: item.year })}
+      >
+        <img
+          src={item.photos[activeIndex].src}
+          alt={item.photos[activeIndex].alt}
+          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+          decoding="async"
+        />
+
+        {/* Year badge */}
+        <span className="absolute top-3 right-3 bg-white/90 dark:bg-zinc-900/90 text-slate-700 dark:text-zinc-300 text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+          {item.year}
+        </span>
+
+        {/* Hover hint */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
+            View full image
+          </span>
+        </div>
+
+        {/* Dot indicators — only when multiple photos */}
+        {hasMultiple && (
+          <div
+            className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {item.photos.map((_, i) => (
+              <button
+                key={i}
+                aria-label={`Photo ${i + 1}`}
+                onClick={() => setActiveIndex(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-200 border border-white ${
+                  i === activeIndex ? 'bg-white scale-110' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="flex flex-col gap-3 p-6 flex-1">
+        <div className="flex items-start gap-3">
+          <div className="w-8 h-8 rounded-lg bg-orange-100 dark:bg-cyan-500/20 flex items-center justify-center shrink-0 mt-0.5">
+            <Heart className="w-4 h-4 text-orange-500 dark:text-cyan-400" />
+          </div>
+          <div>
+            <h3 className="text-slate-800 dark:text-white font-bold text-base leading-snug">
+              {item.title}
+            </h3>
+            <p className="text-teal dark:text-cyan-400 text-sm font-medium mt-0.5">
+              {item.organization}
+            </p>
+            <p className="text-slate-400 dark:text-zinc-500 text-xs mt-0.5">{item.location}</p>
+          </div>
+        </div>
+
+        <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed">
+          {item.description}
+        </p>
+      </div>
+    </motion.div>
+  )
+}
+
 export default function VolunteerWork() {
   const [selected, setSelected] = useState(null)
 
@@ -45,62 +124,14 @@ export default function VolunteerWork() {
             viewport={viewport}
             className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch"
           >
-            {volunteer.map((item, i) => {
-              const isLeft = i % 2 === 0
-              return (
-                <motion.div
-                  key={item.title}
-                  variants={isLeft ? fadeLeft : fadeRight}
-                  className="group relative flex flex-col h-full rounded-2xl overflow-hidden border shadow-md transition-shadow hover:shadow-xl bg-white dark:bg-white/[0.03] border-orange-100 dark:border-white/10 shadow-orange-100/50 dark:shadow-zinc-900/60"
-                >
-                  {/* Photo — clickable */}
-                  <div
-                    className="relative overflow-hidden h-56 shrink-0 cursor-pointer"
-                    onClick={() => setSelected(item)}
-                  >
-                    <img
-                      src={item.photo}
-                      alt={item.photoAlt}
-                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                    {/* Year badge */}
-                    <span className="absolute top-3 right-3 bg-white/90 dark:bg-zinc-900/90 text-slate-700 dark:text-zinc-300 text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
-                      {item.year}
-                    </span>
-                    {/* Hover hint */}
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                      <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 text-white text-xs font-semibold px-3 py-1.5 rounded-full backdrop-blur-sm">
-                        View full image
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="flex flex-col gap-3 p-6 flex-1">
-                    <div className="flex items-start gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-orange-100 dark:bg-cyan-500/20 flex items-center justify-center shrink-0 mt-0.5">
-                        <Heart className="w-4 h-4 text-orange-500 dark:text-cyan-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-slate-800 dark:text-white font-bold text-base leading-snug">
-                          {item.title}
-                        </h3>
-                        <p className="text-teal dark:text-cyan-400 text-sm font-medium mt-0.5">
-                          {item.organization}
-                        </p>
-                        <p className="text-slate-400 dark:text-zinc-500 text-xs mt-0.5">{item.location}</p>
-                      </div>
-                    </div>
-
-                    <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed">
-                      {item.description}
-                    </p>
-                  </div>
-                </motion.div>
-              )
-            })}
+            {volunteer.map((item, i) => (
+              <VolunteerCard
+                key={item.title}
+                item={item}
+                isLeft={i % 2 === 0}
+                onSelect={setSelected}
+              />
+            ))}
           </motion.div>
         </div>
       </section>
@@ -132,8 +163,8 @@ export default function VolunteerWork() {
                 <X className="w-6 h-6" />
               </button>
               <img
-                src={selected.photo}
-                alt={selected.photoAlt}
+                src={selected.src}
+                alt={selected.alt}
                 className="w-full max-h-[80vh] object-contain rounded-xl shadow-2xl"
                 loading="lazy"
                 decoding="async"

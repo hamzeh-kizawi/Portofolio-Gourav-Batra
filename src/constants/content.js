@@ -10,6 +10,8 @@ import expenseManager from '@/assets/images/expense_manager-dashboard.png'
 // Volunteer photos
 import votePic from '@/assets/images/vote-pic.jpeg'
 import awardCeremonyPhoto from '@/assets/images/Award-Ceremony-Photo.jpg'
+import awardPhoto from '@/assets/images/award-photo.jpg'
+import indianAssociationLogo from '@/assets/images/Indian-Association-Austria-logo.jpeg'
 
 // Certification images
 import hubspotImage from '@/assets/images/HubSpot.jpeg'
@@ -216,6 +218,27 @@ export const education = [
 
 export const skills = [
   {
+    category: 'Languages',
+    subcategories: [
+      {
+        label: 'Native / Bilingual',
+        items: ['English', 'Hindi', 'Punjabi'],
+      },
+      {
+        label: 'Professional Working Proficiency',
+        items: ['German'],
+      },
+      {
+        label: 'Basic / Conversational',
+        items: ['Spanish'],
+      },
+      {
+        label: 'Other Indian Languages (Basic Understanding)',
+        items: ['Gujarati', 'Marathi', 'Bengali', 'Haryanvi', 'Odia', 'Assamese'],
+      },
+    ],
+  },
+  {
     category: 'Growth Marketing',
     items: [
       'Paid Acquisition (Google, Meta)',
@@ -270,15 +293,6 @@ export const skills = [
       'Project Management',
     ],
   },
-  {
-    category: 'Languages',
-    items: [
-      'English — Fluent',
-      'Hindi — Native',
-      'German — Upper Intermediate (B2)',
-      'Spanish — Basic (A2)',
-    ],
-  },
 ]
 
 // ─── VOLUNTEER ────────────────────────────────────────────────────────────────
@@ -291,8 +305,9 @@ export const volunteer = [
     year: '2024',
     description:
       'Contested and successfully won three student representative offices in the 2024 university elections, including the main Senate position. Led the campaign strategy through student outreach, messaging, and engagement activities across campus. Represented students in academic and policy discussions while advocating for student welfare, international student integration, and improved communication between students and university administration.',
-    photo: votePic,
-    photoAlt: 'Gourav Batra at university senate election campaign',
+    photos: [
+      { src: votePic, alt: 'Gourav Batra at university senate election campaign' },
+    ],
   },
   {
     title: 'Diwali Cultural Event Coordinator & Stage Host',
@@ -301,8 +316,21 @@ export const volunteer = [
     year: '2025',
     description:
       'Coordinated the 29th Diwali Mela cultural celebration organized by the Hindu Mandir Association in Vienna, attended by nearly 500 people including officials from the Embassy of India in Austria. Managed end-to-end event coordination including planning, volunteer management, performer scheduling, stage operations, and live telecast support. Also served as the event\'s stage anchor, hosting cultural performances and engaging the audience throughout the program. Received a recognition award from the organizing committee for contributions to the successful execution of the event.',
-    photo: awardCeremonyPhoto,
-    photoAlt: 'Gourav Batra at Diwali Mela award ceremony, Vienna',
+    photos: [
+      { src: awardCeremonyPhoto, alt: 'Gourav Batra at Diwali Mela award ceremony, Vienna' },
+      { src: awardPhoto,         alt: 'Gourav Batra at Diwali Mela event, Vienna' },
+    ],
+  },
+  {
+    title: 'Community Engagement & Cultural Events Volunteer',
+    organization: 'Indian Association Austria',
+    location: 'Vienna, Austria',
+    year: '2024',
+    description:
+      'Contributed to community and cultural initiatives organized by the Indian Association Austria, supporting events that promote Indian culture, social connection, and community welfare within the Indian diaspora in Austria. Assisted in coordinating cultural activities, supporting event logistics, and collaborating with volunteers to ensure smooth execution of community programs and celebrations.',
+    photos: [
+      { src: indianAssociationLogo, alt: 'Indian Association Austria logo' },
+    ],
   },
 ]
 

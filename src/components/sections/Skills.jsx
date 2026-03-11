@@ -42,23 +42,52 @@ export default function Skills() {
               <h3 className="text-slate-800 dark:text-white font-bold text-sm uppercase tracking-wide mb-4">
                 {group.category}
               </h3>
-              <motion.div
-                variants={staggerFast}
-                initial="hidden"
-                whileInView="visible"
-                viewport={viewport}
-                className="flex flex-wrap gap-2"
-              >
-                {group.items.map((item) => (
-                  <motion.span
-                    key={item}
-                    variants={fadeUp}
-                    className="text-xs font-medium px-3 py-1.5 rounded-full bg-orange-50 dark:bg-white/5 border border-orange-200 dark:border-white/10 text-slate-700 dark:text-zinc-300 hover:border-teal dark:hover:border-cyan-400 hover:text-teal dark:hover:text-cyan-400 transition-colors cursor-default"
-                  >
-                    {item}
-                  </motion.span>
-                ))}
-              </motion.div>
+              {group.subcategories ? (
+                <div className="flex flex-col gap-3">
+                  {group.subcategories.map((sub) => (
+                    <div key={sub.label}>
+                      <p className="text-orange-500 dark:text-cyan-400 text-[10px] font-semibold uppercase tracking-widest mb-1.5">
+                        {sub.label}
+                      </p>
+                      <motion.div
+                        variants={staggerFast}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={viewport}
+                        className="flex flex-wrap gap-2"
+                      >
+                        {sub.items.map((item) => (
+                          <motion.span
+                            key={item}
+                            variants={fadeUp}
+                            className="text-xs font-medium px-3 py-1.5 rounded-full bg-orange-50 dark:bg-white/5 border border-orange-200 dark:border-white/10 text-slate-700 dark:text-zinc-300 hover:border-teal dark:hover:border-cyan-400 hover:text-teal dark:hover:text-cyan-400 transition-colors cursor-default"
+                          >
+                            {item}
+                          </motion.span>
+                        ))}
+                      </motion.div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <motion.div
+                  variants={staggerFast}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={viewport}
+                  className="flex flex-wrap gap-2"
+                >
+                  {group.items.map((item) => (
+                    <motion.span
+                      key={item}
+                      variants={fadeUp}
+                      className="text-xs font-medium px-3 py-1.5 rounded-full bg-orange-50 dark:bg-white/5 border border-orange-200 dark:border-white/10 text-slate-700 dark:text-zinc-300 hover:border-teal dark:hover:border-cyan-400 hover:text-teal dark:hover:text-cyan-400 transition-colors cursor-default"
+                    >
+                      {item}
+                    </motion.span>
+                  ))}
+                </motion.div>
+              )}
             </motion.div>
           ))}
         </motion.div>
