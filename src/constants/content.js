@@ -318,7 +318,17 @@ export const volunteer = [
       'Coordinated the 29th Diwali Mela cultural celebration organized by the Hindu Mandir Association in Vienna, attended by nearly 500 people including officials from the Embassy of India in Austria. Managed end-to-end event coordination including planning, volunteer management, performer scheduling, stage operations, and live telecast support. Also served as the event\'s stage anchor, hosting cultural performances and engaging the audience throughout the program. Received a recognition award from the organizing committee for contributions to the successful execution of the event.',
     photos: [
       { src: awardCeremonyPhoto, alt: 'Gourav Batra at Diwali Mela award ceremony, Vienna' },
-      { src: awardPhoto,         alt: 'Gourav Batra at Diwali Mela event, Vienna' },
+    ],
+  },
+  {
+    title: 'Stage Host & Cultural Program Anchor',
+    organization: 'Hindu Mandir Association',
+    location: 'Vienna, Austria',
+    year: '2025',
+    description:
+      'Served as the stage anchor for the Diwali cultural celebration, hosting live performances and engaging an audience of nearly 500 attendees. Introduced performers, coordinated stage transitions, and ensured the smooth flow of the cultural program. Maintained audience energy throughout the event by incorporating light humor, interactive commentary, and engaging transitions between performances.',
+    photos: [
+      { src: awardPhoto, alt: 'Gourav Batra hosting the Diwali cultural program on stage, Vienna' },
     ],
   },
   {
