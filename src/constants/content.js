@@ -332,12 +332,12 @@ export const volunteer = [
     ],
   },
   {
-    title: 'Community Engagement & Cultural Events Volunteer',
+    title: 'Logo Design & Community Volunteer',
     organization: 'Indian Association Austria',
     location: 'Vienna, Austria',
-    year: '2024',
+    year: '2025',
     description:
-      'Contributed to community and cultural initiatives organized by the Indian Association Austria, supporting events that promote Indian culture, social connection, and community welfare within the Indian diaspora in Austria. Assisted in coordinating cultural activities, supporting event logistics, and collaborating with volunteers to ensure smooth execution of community programs and celebrations.',
+      'Designed the official logo for the Indian Association Austria, a community organization promoting Indian culture and social engagement within the Indian diaspora in Austria. In addition to contributing to the organization\'s visual identity and branding, also supported community initiatives as a volunteer by assisting with cultural activities, event logistics, and coordination during community programs and celebrations.',
     photos: [
       { src: indianAssociationLogo, alt: 'Indian Association Austria logo' },
     ],
